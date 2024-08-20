@@ -7,6 +7,7 @@ import { Routes } from '@angular/router';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,7 @@ export const routes: Routes = [
 
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimationsAsync()]
 };
 
 bootstrapApplication(AppComponent, appConfig)
