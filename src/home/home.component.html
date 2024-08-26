@@ -5,3 +5,11 @@
         <li>Services</li>
     </ul>
 </nav>
+
+<section class="banner">
+    <img src="../assets/banner.jpg" alt="banner">
+    <div class="card">
+        <input  [matDatepicker]="picker" readonly (click)="picker.open()">
+    </div>
+        <mat-datepicker #picker></mat-datepicker>
+</section>
